@@ -6,6 +6,14 @@
 
 Shizuku supports startup in the following three ways.
 
+::: tip If you are using GrapheneOS
+
+System settings - "Security" - "Secure app spawning" may need to be disabled.
+
+[Source](https://github.com/RikkaApps/websites/pull/79#issue-1751837442)
+
+:::
+
 ### Start with root
 
 For rooted devices, just start directly.
@@ -109,13 +117,13 @@ Searching for pairing service requires access to the local network, and many man
 
 ### Start via wireless debugging: immediately fail after tapping "Enter pairing code"
 
-#### MIUI (Xiaomi)
+#### MIUI (Xiaomi, POCO)
 
 Switch notification style to "Android" from "Notification" - "Notification shade" in system settings.
 
 ### Start via wireless debugging/Start by connecting to a computer: the permission of adb is limited
 
-#### MIUI (Xiaomi)
+#### MIUI (Xiaomi, POCO)
 
 Enable "USB debugging (Security options)" in "Developer options". **Note that this is a separate option from "USB debugging".**
 
@@ -138,11 +146,14 @@ Disable "Flyme payment protection" in "Developer options".
   On Android 8, the option is "Select USB configuration" - "Charge only".
   
   On Android 9+, the option is "Default USB configuration" - "No data transfer".
+
+- (Android 11+) Enable "Disable adb authorization timeout" option
+
 #### EMUI (Huawei)
 
 Enable "Allow ADB debugging options in 'Charge only' mode" in "Developer options".
 
-#### MIUI (Xiaomi)
+#### MIUI (Xiaomi, POCO)
 
 Do not use the scan feature in MIUI's "Security" app, since it will disable "Developer options".
 

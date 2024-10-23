@@ -6,6 +6,14 @@
 
 Shizuku 支援透過以下三種方式啟動。
 
+::: tip 如果您正在使用 GrapheneOS
+
+您可能需要關閉 系統設定 - 「安全」 - 「Secure app spawning」。
+
+[來源](https://github.com/RikkaApps/websites/pull/79#issue-1751837442)
+
+:::
+
 ### 透過 root 啟動
 
 對於已 root 裝置，直接啟動即可。
@@ -107,13 +115,13 @@ adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh
 
 ### 透過無線除錯啟動：點選「輸入配對碼」後立刻提示失敗
 
-#### MIUI（Xiaomi）
+#### MIUI（Xiaomi、POCO）
 
 在系統設定的「通知管理」-「通知顯示設定」將通知樣式切換為「Android」。
 
 ### 透過無線除錯啟動/透過連線電腦啟動：adb 權限受限
 
-#### MIUI（Xiaomi）
+#### MIUI（Xiaomi、POCO）
 
 在「開發人員選項」中開啟「USB 偵錯（安全設定）」。**注意，這和「USB 偵錯」是兩個分開的選項。**
 
@@ -137,11 +145,13 @@ adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh
   
   在 Android 9 及以上版本上選項是「預設 USB 配置」-「不進行資料傳輸」。
 
+- （Android 11+）啟用「停用 ADB 授權逾時」選項。
+
 #### EMUI (Huawei) 
 
 你需要在「開發人員選項」中開啟「僅充電模式下允許 ADB 偵錯選項」。
 
-#### MIUI（Xiaomi）
+#### MIUI（Xiaomi、POCO）
 
 不要使用 MIUI 的「手機管家」的掃描功能，因為它會禁用「開發人員選項」。
 
